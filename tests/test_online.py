@@ -2,7 +2,7 @@
 from autoclr import load
 
 
-load("offline")
+load("online")
 
 import clr
 

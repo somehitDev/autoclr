@@ -1,5 +1,5 @@
 
-### 2024/12/19(0.1.0)
+### 2024/12/19(1.0.0)
 - supported loaders
   - default: just load using `pythonnet.load`.
   - system: get information from system installed dotnet and load.
