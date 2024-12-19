@@ -6,6 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "autoclr"
 authors = [{name = "somehitDev", email = "this.dev.somehit@gmail.com"}]
 license = {file = "LICENSE"}
+readme = "README.md"
 requires-python = ">=3.7"
 dynamic = ["version", "description"]
 dependencies = [

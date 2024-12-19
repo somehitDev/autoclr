@@ -6,6 +6,7 @@ env
 dist
 
 tests/test_lib
+autoclr/assets.py
 
 binaries/sdk
 binaries/win32

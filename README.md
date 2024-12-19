@@ -33,11 +33,8 @@
 
 ## 🌐 install
 ### - using pip
-- currently not available.
-  
-### - using git(dev)
 ```zsh
-python -m pip install git+https://github.com/somehitDev/autoclr.git
+python -m pip install autoclr
 ```
 
 <br/><br/>
