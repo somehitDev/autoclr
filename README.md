@@ -37,6 +37,10 @@
 python -m pip install autoclr
 ```
 
+```zsh
+python -m pip install git+https://github.com/somehitDev/autoclr.git
+```
+
 <br/><br/>
 
 ## 🛠 usage
