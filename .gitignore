@@ -1,0 +1,14 @@
+.vscode
+__pycache__
+._*
+
+env
+dist
+
+tests/test_lib
+
+binaries/sdk
+binaries/win32
+binaries/linux
+binaries/darwin
+binaries/pack_resource.py
