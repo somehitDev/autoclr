@@ -23,11 +23,11 @@
 - python 3.7 or higher
 - tested on
 
-|           OS          | Tested | Pass |        Issue       |
-| --------------------- | ------ | ---- | ------------------ |
-| Mac 13(Sequoia)       |   ✅   |  ✅  |                    |
-| Windows 10(ARM64/UTM) |   ✅   |  ❎  | binary not working |
-| Linux(Ubuntu/ARM)     |   ❎   |  ❎  |                    |
+|           OS          | Tested | Pass |          Issue         |
+| --------------------- | ------ | ---- | ---------------------- |
+| Mac 13(Sequoia)       |   ✅   |  ✅  |                        |
+| Windows 10(ARM64/UTM) |   ✅   |  ❎  | binary not working     |
+| Linux(Ubuntu/ARM)     |   ✅   |  ✅  | arm64, aarch64 support |
 
 <br><br>
 

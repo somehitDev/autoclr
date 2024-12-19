@@ -18,7 +18,7 @@ def load(**params):
     elif sys.platform == "linux":
         if architecture == "x64":
             download_url = "https://download.visualstudio.microsoft.com/download/pr/805cdca8-ac43-4d76-8ce8-efd11f1997f2/17aeb8b0cd34c6f8d80217bf6a4ed3cd/dotnet-runtime-8.0.11-linux-x64.tar.gz"
-        elif architecture == "arm64":
+        elif architecture in ( "arm64", "aarch64" ):
             download_url = "https://download.visualstudio.microsoft.com/download/pr/501c5677-1a80-4232-9223-2c1ad336a304/867b5afc628837835a409cf4f465211d/dotnet-runtime-8.0.11-linux-arm64.tar.gz"
 
         archive_name = "dotnet.tar.gz"
