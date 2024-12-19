@@ -3,17 +3,18 @@ import os, sys, platform, wget, pythonnet
 
 
 def load(**params):
-    architecture = platform.uname().machine
+    architecture = platform.uname().machine.lower()
 
     # get download url
     download_url = None
     if sys.platform == "win32":
-        if architecture == "x64":
-            download_url = "https://download.visualstudio.microsoft.com/download/pr/92f9abc6-1e19-40cd-82cf-670be98d3533/46e1346503f4b54418bf9d5f861f1d43/dotnet-runtime-8.0.11-win-x64.zip"
-        elif architecture == "arm64":
-            download_url = "https://download.visualstudio.microsoft.com/download/pr/3b250d28-7fae-473c-a064-c312c35ca7c8/bc1771d6d4b7dd9dbe6fbb417b9ef1e6/dotnet-runtime-8.0.11-win-arm64.zip"
+        # if architecture == "x64":
+        #     download_url = "https://download.visualstudio.microsoft.com/download/pr/92f9abc6-1e19-40cd-82cf-670be98d3533/46e1346503f4b54418bf9d5f861f1d43/dotnet-runtime-8.0.11-win-x64.zip"
+        # elif architecture == "arm64":
+        #     download_url = "https://download.visualstudio.microsoft.com/download/pr/3b250d28-7fae-473c-a064-c312c35ca7c8/bc1771d6d4b7dd9dbe6fbb417b9ef1e6/dotnet-runtime-8.0.11-win-arm64.zip"
 
-        archive_name = "dotnet.zip"
+        # archive_name = "dotnet.zip"
+        raise RuntimeError("use `system` loader on windows!")
     elif sys.platform == "linux":
         if architecture == "x64":
             download_url = "https://download.visualstudio.microsoft.com/download/pr/805cdca8-ac43-4d76-8ce8-efd11f1997f2/17aeb8b0cd34c6f8d80217bf6a4ed3cd/dotnet-runtime-8.0.11-linux-x64.tar.gz"
@@ -48,6 +49,8 @@ def load(**params):
             "dotnet_root",
             os.path.join(os.path.expanduser("~"), ".autoclr", "dotnet")
         )
+
+    os.makedirs(os.path.dirname(dotnet_root), exist_ok = True)
 
     # check dotnet root directory exists
     if not os.path.exists(dotnet_root):

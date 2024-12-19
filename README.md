@@ -23,11 +23,11 @@
 - python 3.7 or higher
 - tested on
 
-|        OS       | Tested | Pass |
-| --------------- | ------ | ---- |
-| Mac 13(Sequoia) |   ✅   |  ✅  |
-| Windows 10      |   ❎   |  ❎  |
-| Linux(RPI/ARM)  |   ❎   |  ❎  |
+|           OS          | Tested | Pass |        Issue       |
+| --------------------- | ------ | ---- | ------------------ |
+| Mac 13(Sequoia)       |   ✅   |  ✅  |                    |
+| Windows 10(ARM64/UTM) |   ✅   |  ❎  | binary not working |
+| Linux(Ubuntu/ARM)     |   ❎   |  ❎  |                    |
 
 <br><br>
 
@@ -41,7 +41,7 @@ python -m pip install autoclr
 python -m pip install git+https://github.com/somehitDev/autoclr.git
 ```
 
-<br/><br/>
+<br><br>
 
 ## 🛠 usage
 ```python
@@ -51,20 +51,20 @@ from autoclr import load
 load("default", **params)
 # system
 load("system", **params)
-# offline
-load("offline", **params)
+# online
+load("online", **params)
 ```
 - default
   - call pythonnet.load coreclr and parameters.
 - system
   - get dotnet_root from system installed dotnet.
   - if not installed, raise error.
+- online
+  - extract archive downloaded from dotnet official site and load clr.
 - offline
-  - install from binaries of assets directory.
+  - not available not.
 
-## Todo
-🟩 create load type `online`.
-  - download binary from [official site](https://dotnet.microsoft.com) and unzip.
+<br><br>
 
 ## Changes
 - See [CHANGELOG.md](https://github.com/somehitDev/autoclr/blob/main/CHANGELOG.md)
